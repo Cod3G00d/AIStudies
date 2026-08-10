@@ -57,9 +57,17 @@ Start with **Done** / **In progress**. Planned folders show the full curriculum.
 
 ---
 
+## Default LLM for this repo
+
+Projects use **DeepSeek-V4-Flash** via the OpenAI-compatible API:
+
+- Base URL: `https://api.deepseek.com`
+- Model: `deepseek-v4-flash`
+- Config: copy [`.env.example`](./.env.example) → `.env` (never commit `.env`)
+
 ## Stack covered across the course
 
-- **LLMs:** OpenAI / Anthropic / OpenRouter + **Ollama** (local)  
+- **LLMs:** **DeepSeek-V4-Flash** (default) · OpenAI / Anthropic / OpenRouter · **Ollama** (local)  
 - **RAG:** Chroma → Qdrant/pgvector, hybrid search, rerank  
 - **Frameworks:** LangChain, LlamaIndex, **LangGraph**  
 - **Agents:** native tool calling, CrewAI / OpenAI Agents SDK, **Hermes Agent**  

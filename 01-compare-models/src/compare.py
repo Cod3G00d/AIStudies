@@ -1,15 +1,19 @@
-"""Compare the same prompt across OpenAI-compatible providers (API and/or Ollama)."""
+"""Compare the same prompt across OpenAI-compatible providers (DeepSeek by default, optional Ollama)."""
 
 from __future__ import annotations
 
 import os
 import time
 from dataclasses import dataclass
+from pathlib import Path
 
 from dotenv import load_dotenv
 from openai import OpenAI
 
-load_dotenv()
+# Prefer project .env, then monorepo root .env
+_HERE = Path(__file__).resolve().parent
+load_dotenv(_HERE.parent / ".env")
+load_dotenv(_HERE.parent.parent / ".env")
 
 PROMPT = "In 3 bullets, explain what RAG is to a senior developer."
 
@@ -29,14 +33,26 @@ def make_client(api_key: str, base_url: str) -> OpenAI:
     return OpenAI(api_key=api_key or "ollama", base_url=base_url)
 
 
-def run_once(name: str, client: OpenAI, model: str, prompt: str) -> RunResult:
+def run_once(
+    name: str,
+    client: OpenAI,
+    model: str,
+    prompt: str,
+    *,
+    disable_thinking: bool = False,
+) -> RunResult:
     started = time.perf_counter()
+    kwargs: dict = {
+        "model": model,
+        "messages": [{"role": "user", "content": prompt}],
+        "temperature": 0,
+    }
+    # DeepSeek V4 thinking is on by default; disable for faster/cheaper study runs
+    if disable_thinking:
+        kwargs["extra_body"] = {"thinking": {"type": "disabled"}}
+
     try:
-        response = client.chat.completions.create(
-            model=model,
-            messages=[{"role": "user", "content": prompt}],
-            temperature=0,
-        )
+        response = client.chat.completions.create(**kwargs)
         latency = time.perf_counter() - started
         usage = response.usage
         return RunResult(
@@ -75,17 +91,24 @@ def print_result(result: RunResult) -> None:
 
 
 def main() -> None:
-    targets: list[tuple[str, OpenAI, str]] = []
+    targets: list[tuple[str, OpenAI, str, bool]] = []
 
-    openai_key = os.getenv("OPENAI_API_KEY", "").strip()
-    if openai_key:
-        targets.append(
-            (
-                "cloud",
-                make_client(openai_key, os.getenv("OPENAI_BASE_URL", "https://api.openai.com/v1")),
-                os.getenv("OPENAI_MODEL", "gpt-4o-mini"),
-            )
+    api_key = (
+        os.getenv("DEEPSEEK_API_KEY", "").strip()
+        or os.getenv("OPENAI_API_KEY", "").strip()
+    )
+    if api_key:
+        base_url = (
+            os.getenv("DEEPSEEK_BASE_URL")
+            or os.getenv("OPENAI_BASE_URL")
+            or "https://api.deepseek.com"
         )
+        model = (
+            os.getenv("DEEPSEEK_MODEL")
+            or os.getenv("OPENAI_MODEL")
+            or "deepseek-v4-flash"
+        )
+        targets.append(("deepseek", make_client(api_key, base_url), model, True))
 
     ollama_model = os.getenv("OLLAMA_MODEL", "").strip()
     if ollama_model:
@@ -94,17 +117,20 @@ def main() -> None:
                 "ollama",
                 make_client("ollama", os.getenv("OLLAMA_BASE_URL", "http://localhost:11434/v1")),
                 ollama_model,
+                False,
             )
         )
 
     if not targets:
         raise SystemExit(
-            "Set OPENAI_API_KEY and/or OLLAMA_MODEL in .env (see .env.example)."
+            "Set DEEPSEEK_API_KEY (or OPENAI_API_KEY) in .env — see .env.example."
         )
 
     print(f"Prompt:\n{PROMPT}\n")
-    for name, client, model in targets:
-        print_result(run_once(name, client, model, PROMPT))
+    for name, client, model, disable_thinking in targets:
+        print_result(
+            run_once(name, client, model, PROMPT, disable_thinking=disable_thinking)
+        )
 
 
 if __name__ == "__main__":
