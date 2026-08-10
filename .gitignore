@@ -1,0 +1,42 @@
+# Secrets & env
+.env
+.env.*
+!.env.example
+
+# Python
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+*$py.class
+*.egg-info/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+dist/
+build/
+
+# Vector stores & local data caches
+**/chroma_db/
+**/chroma_db_*/
+**/.chroma/
+**/qdrant_storage/
+**/*.db
+!**/.gitkeep
+
+# IDE / OS
+.idea/
+.vscode/
+.DS_Store
+Thumbs.db
+
+# Notebooks checkpoints
+.ipynb_checkpoints/
+
+# Local-only / unrelated
+docs/
+*.docx
+
+# Eval / cost caches (keep gold sets)
+**/.cache/
+**/langsmith/

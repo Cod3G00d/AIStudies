@@ -1,0 +1,11 @@
+Acme Tech — FAQ interno (documento de estudo)
+
+A Acme Tech foi fundada em 2019 em São Paulo.
+O produto principal é o AcmeFlow, uma plataforma de automação de workflows.
+O plano Starter custa R$ 99/mês e inclui até 3 usuários.
+O plano Pro custa R$ 299/mês e inclui até 20 usuários e suporte prioritário.
+O SLA do plano Pro é de 99,9% de uptime.
+O suporte responde em até 4 horas úteis no plano Pro e em até 24 horas no Starter.
+A stack oficial do time de IA usa Python, LangChain, LangGraph e bancos vetoriais (Chroma em desenvolvimento, Pinecone em produção).
+RAG significa Retrieval-Augmented Generation: recuperar trechos relevantes e usá-los como contexto para o LLM.
+Um agente é um sistema que usa um LLM para decidir quais ferramentas chamar em loop até resolver a tarefa.
