@@ -1,4 +1,4 @@
-﻿# 16 — Hermes Agent (Study Buddy)
+﻿# 17 — Hermes Agent (Study Buddy)
 
 **Status:** Planned
 

@@ -1,4 +1,4 @@
-﻿# 15 — Microsoft GraphRAG
+﻿# 16 — Microsoft GraphRAG
 
 **Status:** Planned
 

@@ -50,10 +50,12 @@ Start with **Done** / **In progress**. Planned folders show the full curriculum.
 | 11 | [`11-workflow-rpi`](./11-workflow-rpi) | Workflows | Research → Plan → Implement + HITL; context engineering in practice | Planned |
 | 12 | [`12-multiagent-sdk`](./12-multiagent-sdk) | Multi-agent | CrewAI or OpenAI Agents SDK vs LangGraph — speed vs control | Planned |
 | 13 | [`13-a2a-mini`](./13-a2a-mini) | A2A | Agent Cards and agent↔agent delegation (protocol intro) | Planned |
-| 14 | [`14-minigraphrag`](./14-minigraphrag) | Homemade GraphRAG | Entity/relation extraction + NetworkX; global vs local queries | Planned |
-| 15 | [`15-ms-graphrag`](./15-ms-graphrag) | Microsoft GraphRAG | Community indexing; cost/quality vs vector RAG | Planned |
-| 16 | [`16-hermes-study-buddy`](./16-hermes-study-buddy) | Hermes Agent | Persistent agent, skills, memory that compounds across sessions | Planned |
-| 17 | [`17-eval-security-api`](./17-eval-security-api) | Lean production | RAGAS/DeepEval, tracing, FastAPI, sandbox/HITL for risky tools | Planned |
+| 14 | [`14-docint-multimodal`](./14-docint-multimodal) | Document intelligence | OCR, tables, layout, vision — enterprise RAG on real documents | Planned |
+| 15 | [`15-minigraphrag`](./15-minigraphrag) | Homemade GraphRAG | Entity/relation extraction + NetworkX; global vs local queries | Planned |
+| 16 | [`16-ms-graphrag`](./16-ms-graphrag) | Microsoft GraphRAG | Community indexing; cost/quality vs vector RAG | Planned |
+| 17 | [`17-hermes-study-buddy`](./17-hermes-study-buddy) | Hermes Agent | Persistent agent, skills, memory that compounds across sessions | Planned |
+| 18 | [`18-finetune-lora`](./18-finetune-lora) | Fine-tuning / SLMs | LoRA/QLoRA, quantization; decide when to fine-tune vs RAG | Planned |
+| 19 | [`19-eval-cost-api`](./19-eval-cost-api) | Lean production | Retrieval + generation eval, caching/routing, FastAPI + streaming | Planned |
 
 ---
 
@@ -68,11 +70,12 @@ Projects use **DeepSeek-V4-Flash** via the OpenAI-compatible API:
 ## Stack covered across the course
 
 - **LLMs:** **DeepSeek-V4-Flash** (default) · OpenAI / Anthropic / OpenRouter · **Ollama** (local)  
-- **RAG:** Chroma → Qdrant/pgvector, hybrid search, rerank  
+- **RAG:** Chroma → Qdrant/pgvector, hybrid search, rerank, **document intelligence**  
 - **Frameworks:** LangChain, LlamaIndex, **LangGraph**  
 - **Agents:** native tool calling, CrewAI / OpenAI Agents SDK, **Hermes Agent**  
 - **Protocols:** **MCP**, intro to **A2A**  
-- **Quality:** gold set, RAGAS/DeepEval, LangSmith / Langfuse / Phoenix  
+- **Fine-tuning:** LoRA / QLoRA, quantization  
+- **Quality & cost:** gold set, RAGAS/DeepEval, LangSmith / Langfuse / Phoenix, caching / routing  
 
 ---
 

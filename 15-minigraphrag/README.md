@@ -1,4 +1,4 @@
-﻿# 14 — Mini GraphRAG
+﻿# 15 — Mini GraphRAG
 
 **Status:** Planned
 
