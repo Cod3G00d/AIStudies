@@ -1,9 +1,9 @@
-﻿# 09 — Mesmo agente em LangGraph
+﻿# 09 — Same Agent in LangGraph
 
 **Status:** Planned
 
-## O que este projeto ensina
+## What this project teaches
 
-- `StateGraph`, nós agent/tools/end
-- Checkpoints e debugging de estado
-- Quando o grafo se justifica vs script ReAct
+- `StateGraph`, agent/tools/end nodes
+- Checkpoints and state debugging
+- When a graph is worth it vs a plain ReAct script

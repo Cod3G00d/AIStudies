@@ -1,17 +1,17 @@
-# 03 — RAG + Agente (Hello World)
+# 03 — RAG + Agent (Hello World)
 
 **Status:** Done  
 **Stack:** LangChain · LangGraph · Chroma · Ollama
 
-## O que este projeto ensina
+## What this project teaches
 
-1. Carregar documentos e fazer **chunking** (`RecursiveCharacterTextSplitter`)  
-2. **Embeddings** + persistência no **Chroma**  
-3. Retrieval exposto como **tool** do agente  
-4. Loop **ReAct** (LangGraph / `create_agent`): decide → tool → responde  
-5. Rodar tudo **local** com Ollama (sem API paga)
+1. Load documents and apply **chunking** (`RecursiveCharacterTextSplitter`)  
+2. **Embeddings** + persistence in **Chroma**  
+3. Expose retrieval as an agent **tool**  
+4. **ReAct** loop (LangGraph / `create_agent`): decide → tool → answer  
+5. Run everything **locally** with Ollama (no paid API)
 
-> Use **Python 3.12**. Ollama precisa estar rodando (`ollama list`).
+> Use **Python 3.12**. Ollama must be running (`ollama list`).
 
 ## Setup
 
@@ -24,12 +24,12 @@ pip install -r requirements.txt
 # ollama pull nomic-embed-text
 ```
 
-## Rodar
+## Run
 
 ```bash
 python src/main.py
 ```
 
-## Por que este projeto existe no currículo
+## Why this project sits here
 
-É o primeiro contato **end-to-end** com RAG + agente. Os projetos seguintes isolam e aprofundam cada peça (hybrid search, eval, memória, MCP, etc.).
+First **end-to-end** contact with RAG + an agent. Later projects isolate and deepen each piece (hybrid search, eval, memory, MCP, etc.).

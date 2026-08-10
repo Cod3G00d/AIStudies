@@ -2,8 +2,8 @@
 
 **Status:** Planned
 
-## O que este projeto ensina
+## What this project teaches
 
-- Extrair entidades/relações com LLM
-- Grafo (NetworkX) + travessia para responder
-- Queries **globais** (temas) vs **locais** (fatos)
+- Extract entities/relations with an LLM
+- Graph (NetworkX) + traversal to answer questions
+- **Global** (themes) vs **local** (facts) queries

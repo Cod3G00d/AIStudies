@@ -1,4 +1,4 @@
-"""Compara o mesmo prompt em provedores OpenAI-compatible (API e/ou Ollama)."""
+"""Compare the same prompt across OpenAI-compatible providers (API and/or Ollama)."""
 
 from __future__ import annotations
 
@@ -11,7 +11,7 @@ from openai import OpenAI
 
 load_dotenv()
 
-PROMPT = "Em 3 bullets, explique o que é RAG para um desenvolvedor sênior."
+PROMPT = "In 3 bullets, explain what RAG is to a senior developer."
 
 
 @dataclass
@@ -47,7 +47,7 @@ def run_once(name: str, client: OpenAI, model: str, prompt: str) -> RunResult:
             prompt_tokens=getattr(usage, "prompt_tokens", None) if usage else None,
             completion_tokens=getattr(usage, "completion_tokens", None) if usage else None,
         )
-    except Exception as exc:  # noqa: BLE001 — script didático
+    except Exception as exc:  # noqa: BLE001 — study script
         return RunResult(
             name=name,
             model=model,
@@ -62,9 +62,11 @@ def run_once(name: str, client: OpenAI, model: str, prompt: str) -> RunResult:
 def print_result(result: RunResult) -> None:
     print("=" * 60)
     print(f"{result.name} | model={result.model}")
-    print(f"latency={result.latency_s:.2f}s | "
-          f"prompt_tokens={result.prompt_tokens} | "
-          f"completion_tokens={result.completion_tokens}")
+    print(
+        f"latency={result.latency_s:.2f}s | "
+        f"prompt_tokens={result.prompt_tokens} | "
+        f"completion_tokens={result.completion_tokens}"
+    )
     if result.error:
         print(f"ERROR: {result.error}")
     else:
@@ -97,7 +99,7 @@ def main() -> None:
 
     if not targets:
         raise SystemExit(
-            "Configure OPENAI_API_KEY e/ou OLLAMA_MODEL no .env (veja .env.example)."
+            "Set OPENAI_API_KEY and/or OLLAMA_MODEL in .env (see .env.example)."
         )
 
     print(f"Prompt:\n{PROMPT}\n")

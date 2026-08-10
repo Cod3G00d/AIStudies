@@ -2,8 +2,8 @@
 
 **Status:** Planned
 
-## O que este projeto ensina
+## What this project teaches
 
-- Diferença entre RAG em pipeline fixo e **Agentic RAG**
-- Tools `retrieve` / `list_docs` / responder sem retrieve
-- Custo e acerto vs RAG clássico no mesmo gold set
+- Difference between fixed-pipeline RAG and **Agentic RAG**
+- Tools `retrieve` / `list_docs` / answer without retrieval
+- Cost and accuracy vs classic RAG on the same gold set

@@ -1,1 +1,1 @@
-# Anote aqui suas observações ao comparar modelos (qualidade, latência, custo).
+# Record observations when comparing models (quality, latency, cost).

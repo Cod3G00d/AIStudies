@@ -2,9 +2,9 @@
 
 **Status:** Planned
 
-## O que este projeto ensina
+## What this project teaches
 
 - Hybrid search: **BM25 + vector**
-- **Rerank** (cross-encoder ou API) para melhorar precisão
-- Respostas com **citações/fontes**
-- Criar o `gold_set.json` reutilizado no resto do curso
+- **Reranking** (cross-encoder or API) to improve precision
+- Answers with **citations/sources**
+- Create the shared `gold_set.json` reused across the course

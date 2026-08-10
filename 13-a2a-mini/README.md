@@ -1,9 +1,9 @@
-﻿# 13 — A2A (Agent-to-Agent) intro
+﻿# 13 — A2A (Agent-to-Agent) Intro
 
 **Status:** Planned
 
-## O que este projeto ensina
+## What this project teaches
 
-- Diferença **MCP** (agent↔tools) vs **A2A** (agent↔agent)
-- Agent Cards e delegação entre agentes
-- Quando multiagente interno (framework) vs protocolo entre serviços
+- **MCP** (agent↔tools) vs **A2A** (agent↔agent)
+- Agent Cards and delegation between agents
+- When internal multi-agent (framework) vs cross-service protocol

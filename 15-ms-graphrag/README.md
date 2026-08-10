@@ -2,8 +2,8 @@
 
 **Status:** Planned
 
-## O que este projeto ensina
+## What this project teaches
 
-- Pipeline de referência GraphRAG (Microsoft)
-- Custo de indexação e community summaries
-- Comparar com vector RAG e com o mini GraphRAG caseiro
+- Reference GraphRAG pipeline (Microsoft)
+- Indexing cost and community summaries
+- Compare with vector RAG and the homemade mini GraphRAG

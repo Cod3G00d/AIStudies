@@ -1,9 +1,9 @@
-﻿# 07 — Camadas de memória
+﻿# 07 — Memory Layers
 
 **Status:** Planned
 
-## O que este projeto ensina
+## What this project teaches
 
-- Memória **working** (turno), **episódica** (sessões) e **estruturada** (fatos)
-- Por que memória ≠ só vector database
-- Persistência simples (SQLite + embeddings) entre sessões
+- **Working**, **episodic**, and **structured** memory
+- Why memory ≠ just a vector database
+- Simple persistence (SQLite + embeddings) across sessions

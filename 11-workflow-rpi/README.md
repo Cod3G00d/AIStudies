@@ -1,9 +1,9 @@
-﻿# 11 — Workflow RPI (LangGraph)
+﻿# 11 — RPI Workflow (LangGraph)
 
 **Status:** Planned
 
-## O que este projeto ensina
+## What this project teaches
 
-- Padrão **Research → Plan → Implement** (+ critique)
-- Human-in-the-loop para aprovar o plano
-- Context engineering: quebrar tarefas para não estourar a janela
+- **Research → Plan → Implement** pattern (+ critique)
+- Human-in-the-loop to approve the plan
+- Context engineering: split tasks so the window stays manageable

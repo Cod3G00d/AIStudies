@@ -1,9 +1,9 @@
-﻿# 17 — Eval, segurança e API
+﻿# 17 — Eval, Security, and API
 
 **Status:** Planned
 
-## O que este projeto ensina
+## What this project teaches
 
-- Avaliar stacks com gold set (RAGAS/DeepEval)
+- Evaluate stacks with a gold set (RAGAS/DeepEval)
 - Tracing (LangSmith / Langfuse / Phoenix)
-- Expor `/ask` em FastAPI com limites e HITL para tools perigosas
+- Expose `/ask` with FastAPI, limits, and HITL for risky tools

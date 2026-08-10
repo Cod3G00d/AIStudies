@@ -1,9 +1,9 @@
-﻿# 12 — Multiagente (CrewAI / OpenAI Agents)
+﻿# 12 — Multi-Agent (CrewAI / OpenAI Agents)
 
 **Status:** Planned
 
-## O que este projeto ensina
+## What this project teaches
 
-- Prototipar multiagente rápido (CrewAI ou OpenAI Agents SDK)
-- Comparar com LangGraph: velocidade vs previsibilidade
-- Papéis Researcher / Writer / Critic
+- Prototype multi-agent systems quickly (CrewAI or OpenAI Agents SDK)
+- Compare with LangGraph: speed vs predictability
+- Researcher / Writer / Critic roles

@@ -2,9 +2,9 @@
 
 **Status:** Planned
 
-## O que este projeto ensina
+## What this project teaches
 
-- Embeddings e similaridade cosseno **sem** LangChain/LlamaIndex
-- Limiar de confiança (não responder se o score for baixo)
-- Efeito de chunk size, overlap e top-k na qualidade
-- Base de context engineering: menos contexto ruidoso = melhor resposta
+- Embeddings and cosine similarity **without** LangChain/LlamaIndex
+- Confidence threshold (do not answer if the score is too low)
+- Effect of chunk size, overlap, and top-k on quality
+- Context engineering basics: less noisy context = better answers

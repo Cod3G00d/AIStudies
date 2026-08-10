@@ -2,8 +2,8 @@
 
 **Status:** Planned
 
-## O que este projeto ensina
+## What this project teaches
 
-- Agente **persistente** vs one-shot
-- Memória + **skills** reutilizáveis (manual vs gerada)
-- Quando usar Hermes vs LangGraph em produto
+- **Persistent** agent vs one-shot runs
+- Memory + reusable **skills** (hand-written vs generated)
+- When to use Hermes vs LangGraph in a product

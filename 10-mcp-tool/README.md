@@ -2,8 +2,8 @@
 
 **Status:** Planned
 
-## O que este projeto ensina
+## What this project teaches
 
-- **Model Context Protocol**: tools como contrato padrão
-- Expor e consumir um MCP server
-- Riscos básicos: tool poisoning e aprovação de tools destrutivas
+- **Model Context Protocol**: tools as a standard contract
+- Expose and consume an MCP server
+- Basic risks: tool poisoning and approving destructive tools

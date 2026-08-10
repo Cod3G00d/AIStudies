@@ -1,10 +1,10 @@
-﻿# 04 — LlamaIndex vs LangChain (mesmo corpus)
+﻿# 04 — LlamaIndex vs LangChain (same corpus)
 
 **Status:** Planned
 
-## O que este projeto ensina
+## What this project teaches
 
-- Montar o mesmo RAG em **LlamaIndex** e **LangChain**
-- Comparar DX, linhas de código e clareza da API
-- Avaliar recall qualitativo com o mesmo conjunto de perguntas
-- Decidir quando cada framework se paga
+- Build the same RAG pipeline in **LlamaIndex** and **LangChain**
+- Compare DX, lines of code, and API clarity
+- Assess qualitative recall with the same question set
+- Decide when each framework is worth the complexity

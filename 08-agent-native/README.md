@@ -1,9 +1,9 @@
-﻿# 08 — Agente nativo (ReAct)
+﻿# 08 — Native Agent (ReAct)
 
 **Status:** Planned
 
-## O que este projeto ensina
+## What this project teaches
 
-- Agente = modelo + tools + loop
-- Tool calling no SDK nativo (~80 linhas, sem framework)
-- Timeouts, erros de tool e quando RAG fixo basta
+- Agent = model + tools + loop
+- Native SDK tool calling (~80 lines, no framework)
+- Timeouts, tool errors, and when fixed RAG is enough
